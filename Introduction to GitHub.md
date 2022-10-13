@@ -3,12 +3,16 @@ Starting a career in tech, you can easily get overwhelmed by the number of langu
 The many use cases of GitHub could leave you wondering, is it a social networking site for developers? Or a place where code is shared? I have seen some articles on GitHub, does it support documentation?
 
 ### In this article, you will:
-* have a brief overview of GitHub and why it is necessary.
+* Learn about GitHub and why it is necessary.
 * Clone a repository, make commits, and create a pull request.
 * Compare Github Desktop versus Github CLI
 
+### Prerequisites:
+1. Basic knowledge of commands used in the terminal. Check out this article: [17 Terminal commands every user should know](https://www.techrepublic.com/article/16-terminal-commands-every-user-should-know/).
+2. An internet connection.
+
 ## What is Github?
-GitHub is a web-based code hosting platform and version control system, where developers and programmers can collaborate or work on software projects together. This makes it possible to keep track of the work done and easily navigate between the various versions of the project while managing the online backup.
+GitHub is an online code hosting platform and version control system, where developers and programmers can collaborate or work on software projects together. This makes it possible to keep track of the work done and easily navigate between the various versions of the project while managing the online backup.
 GitHub is free and quite simple to use and plays a significant role in the Open Source movement.
 
 ## Why Github?
@@ -18,18 +22,30 @@ Apart from being a popular version control system, GitHub is a web-based platfor
 
 
 ## Git vs. GitHub
-Many people have this misconception that Git and GitHub are the same, but they are not. It is possible to use git without GitHub.
+Many people have this misconception that Git and GitHub are just the same, but they are not. Git can be used without GitHub.
 
-Git is a distributed version control system that keeps track of several versions of a file. The majority of Git's operations can be carried out offline, users can set up and run Git on their local computers.
+Git is a distributed version control system that monitors the several versions of a file and the changes made. The majority of Git's operations can be carried out offline, users can set up and run Git on their local computers.
 ### However,
-GitHub is a web-based code hosting platform for hosting git repositories online. This means that you need the internet to do anything on Github. Users can make their online repositories private or open for others to collaborate.
+GitHub is a web-based code hosting platform for storing Git repositories online. This means that you will need an internet connection to use Github. Users can make their online repositories private or open for others to collaborate.
+
+The table below highlights a few differences between Git and Github:
+
+
+| S/N | Git                                                               | GitHub                                                                   |
+|-----|-------------------------------------------------------------------|--------------------------------------------------------------------------|
+| 1.  | Monitors the several versions of a file and the changes made.     | Stores Git repositories online.                                          |
+| 2.  | Can be used without GitHub.                                       | Cannot function without Git.                                             |
+| 3.  | Git operations can be carried out offline on your local computer. | GitHub is a web-based platform and thus requires an internet connection. |
+| 4.  | Does not have user management capabilities.                       | Has user management capabilities.                                        |
+| 5.  | Git is an Open Source project.                                    | GitHub is not Open Source.                                               |
+
 
 
 
 ## How To Clone A Repository
-Earlier you read that GitHub is a platform for hosting git repositories online. You may ask: "What are repositories?".
+Earlier you read that GitHub is a platform for hosting Git repositories online. You may ask: "**What are repositories?**".
 
-A repository is like a folder that stores all your project's files and the revision history of each of these files.
+A repository is a folder that contains all of your project's files and the revision history of these files.
 
 A repository can be owned individually, or co-owned by members of your organization.
 When you clone a repository from GitHub.com, you copy it to your local computer. This makes it easier to make changes, add or remove files, etc.
@@ -88,7 +104,7 @@ With time, commits show the history of the repository:
 * some metadata.
 
 ### Listed below are the steps to commit local changes on GitHub:
-**Step One:** Launch the Terminal on your Linux or Mac computer (For Windows, use Bash).
+**Step One:** Launch the Terminal.
 
 **Step Two:** Change the current working directory to the file location where the cloned directory will be stored.
 
@@ -149,6 +165,17 @@ If you don't have write access to a repository, but still want to create a new b
 **Step Eight:** Enter a description in the **Leave a comment** field. You can attach files to the description by dragging and dropping, selecting, or pasting them.
 
 **Step Nine:** Below the **Leave a comment** field, click on **Create pull request** button, to create a pull request that is ready for review. To create a draft pull request, Click on the drop-down and then select **Create Draft Pull Request**.
+
+
+## GitHub Desktop vs. GitHub CLI
+GitHub Desktop and GitHub CLI are other ways in which you can interact with GitHub other than through its website.
+
+GitHub CLI(also known as Command Line Interface) makes it possible to take advantage of GitHub's features from your terminal. It is open source and saves the time used in navigating through UI. You can check out their official [website](https://cli.github.com/) to learn how you can install and start using Github CLI.
+
+On the other hand, GitHub Desktop simplifies and enhances your GitHub workflow through an easy-to-use visual interface. With GitHub Desktop, you don't have to be conversant with the terminal, but you can perform Git and GitHub operations by interacting with UI elements. You can check out their official [website](https://desktop.github.com/ ) to learn how you can install and start using GitHub Desktop.
+
+GitHub Desktop and GitHub CLI are both Open Source projects, which extend the use of GitHub to suit your different preferences. Whether you prefer the straightforwardness of the command line interface or the simplicity of a visual interface.
+
 
 ## Conclusion
 GitHub makes it easier to create and collaborate on software projects. Software development can take place simultaneously and iteratively while storing the history of each change.
