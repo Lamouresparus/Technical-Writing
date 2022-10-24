@@ -7,9 +7,6 @@ The many use cases of GitHub could leave you wondering, is it a social networkin
 * Clone a repository, make commits, and create a pull request.
 * Compare Github Desktop versus Github CLI
 
-### Prerequisites:
-1. Basic knowledge of commands used in the terminal. Check out this article: [17 Terminal commands every user should know](https://www.techrepublic.com/article/16-terminal-commands-every-user-should-know/).
-2. An internet connection.
 
 ## What is Github?
 GitHub is an online code hosting platform and version control system, where developers and programmers can collaborate or work on software projects together. This makes it possible to keep track of the work done and easily navigate between the various versions of the project while managing the online backup.
@@ -51,7 +48,10 @@ A repository can be owned individually, or co-owned by members of your organizat
 When you clone a repository from GitHub.com, you copy it to your local computer. This makes it easier to make changes, add or remove files, etc.
 
 ### Listed below are the steps to clone a repository on GitHub using a web browser:
-**Step One:** Navigate to the repository's home page on GitHub.com.
+
+This article makes use of Udacity's [Android_Me](https://github.com/udacity/Android_Me) repository.
+
+**Step One:** Navigate to the repository's home page on [GitHub.com](https://github.com/udacity/Android_Me).
 
 **Step Two:** Above the repository's file list, Click Code. 
 
@@ -61,12 +61,12 @@ A popup menu will appear, that looks like this:
 
 ![popup menu image](images/pop_up_menu.png "Popup menu")
 
-* Clicking "HTTPS" clone's the repository via HTTPS.
-* Clicking "SSH", clones the repository using a password-protected SSH key and a certificate provided by the SSH certificate authority for your company.
-* Clicking on "GitHub CLI", clones the repository using GitHub's command-line tool.
+* Clicking `HTTPS` clone's the repository via HTTPS.
+* Clicking `SSH`, clones the repository using a password-protected SSH key and a certificate provided by the SSH certificate authority for your company.
+* Clicking on `GitHub CLI`, clones the repository using GitHub's command-line tool.
 
 
-**Step Three:** Select the HTTPS tab and click on the copy icon to copy the web URL
+**Step Three:** Select the `HTTPS` tab and click on the copy icon to copy the web URL
 
 ![click on copy image](images/click_on_copy.png "Click on copy")
 
@@ -75,10 +75,22 @@ A popup menu will appear, that looks like this:
 
 **Step Four:** Launch the Terminal on your Linux or Mac computer (For Windows, use Bash).
 
+Follow these steps to Launch the terminal on a Mac:
+
+1. Click the Launchpad icon in the Dock
+2. Enter Terminal in the search field
+3. Click on the Terminal icon.
+
 **Step Five:** Change the current working directory to the file location where the cloned directory will be stored.
 
+You can change the current working directory from the terminal using the change directory command (written as `cd`). To do this:
 
-**Step Six:** On the terminal, type in `git clone ` and then paste the web URL to the repository.
+Enter `cd <FILE_LOCATION>` on the terminal.
+
+Check out this article: [17 Terminal commands every user should know](https://www.techrepublic.com/article/16-terminal-commands-every-user-should-know/), to learn basic commands.
+
+
+**Step Six:** On the terminal, enter `git clone ` and then paste the web URL to the repository.
 
 ![clone GitHub URL image](images/clone_github_url.png "Clone GitHub URL")
 
@@ -90,55 +102,58 @@ A popup menu will appear, that looks like this:
 With your local clone of the repository, you can easily make changes, create, and add files to it. You can then commit these changes and push them.
 
 
-**Note:**
-You cannot make changes directly to a repository you do not own. You will have to fork the repository first to your GitHub account, before cloning the forked repo. You can read more about forks [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+
+>You cannot make changes directly to a repository you do not own. You must first fork the repository to your GitHub account, before cloning the forked repo. You can read more about forks [here](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
 
 
 ## How To Commit To GitHub
-A commit is similar to a picture of your repository at a particular time. They represent time-stamped snapshots of your whole repository. It is advised to frequently create new commits based on logical units of changes made.
+A commit saves the local changes you have made to a repository at a particular time. It is advised to frequently create new commits based on logical units of changes made.
 
-With time, commits show the history of the repository:
-* the different changes made,
-* its author,
-* timestamp, and
-* some metadata.
+With time, commits create a time-stamped photo album of your repository, which shows the history of the repository with:
+* The different changes made,
+* Its author,
+* Timestamp, and
+* Some metadata.
 
 ### Listed below are the steps to commit local changes on GitHub:
-**Step One:** Launch the Terminal.
+**Step One:** Follow Steps four and five on [How To Clone A Repository](#how-to-clone-a-repository) above.
 
-**Step Two:** Change the current working directory to the file location where the cloned directory will be stored.
+**Step Two:** On the terminal, enter `git init`. This is to initialize the current directory as a Git repository. The default initial branch is master.
 
-**Step Three:** On the terminal, type in `git init`. This is to initialize the current directory as a Git repository. The default initial branch is master.
+**Step Three:** Press **Enter**.
 
-**Step Four:** Press **Enter**.
+**Step Four:** On the terminal, enter `git add .` and press **Enter**. This adds and stages all the changed files in the local repository for committing.
 
-**Step Five:** On the terminal, type in `git add .` and press **Enter**. This adds and stages the files in the local repository for commit.
+There are other common options you can choose from when adding files, like adding a single file, directory, or portions of a file. You can check them out [here](https://www.atlassian.com/git/tutorials/saving-changes#:~:text=of%20the%20project.-,Common%20options,-git%C2%A0add%C2%A0).
 
-**Step Six:** On the terminal, type in `git commit -m "descriptive commit message"`. Enter your commit message within the quotes. This commits the staged files with a commit message.
+**Step Five:** On the terminal, enter `git commit -m "descriptive commit message"`. Enter your commit message within the quotes. This saves the staged files with a commit message.
 
 
-Now that you have committed your changes, you will have to push these local changes to the remote GitHub repository. We said earlier that we will need the internet to do anything on Github, thus you need an internet connection to push these changes to its remote GitHub repository.
+Now that you have committed your changes, you will have to push these local changes to the remote GitHub repository. You need an internet connection to do this.
 
 
 
 ### Listed below are the steps to push changes to GitHub:
 
-**Step One:** On the terminal type in `git remote add origin <REMOTE_URL>`. This sets the remote repository, where your local repository will be pushed.
+**Step One:** On the terminal enter `git remote add origin <REMOTE_URL>` in your repository's directory. This sets the remote repository, where your local changes will be pushed to. The command will look like this:
 
-**Step Two:** On the terminal type in `git remote -v` to verify the remote repository's URL is correct.
+![Set remote repository image](images/set%20git%20remote.png "Set remote repository")
 
-**Step Three:** On the terminal type in `git push -u origin main`. This updates the remote repository on GitHub.com with the changes in your local repository.
+**Step Two:** On the terminal enter `git remote -v` to verify the remote repository's URL is correct.
+
+**Step Three:** On the terminal enter `git push -u origin main`. This updates the remote repository on GitHub.com with the changes in your local repository.
 
 ## Create A Pull Request
 A pull request proposes changes in a branch you want to be merged into a repository. This ensures that the main branch only contains finished and approved work.
 
 When creating a pull request, select which branch you want to merge your changes into. A pull request can only be opened between two different branches.
 
-If you don't have write access to a repository, but still want to create a new branch for your pull request, you will have to fork the repository first.
+If you don't have write access to a repository, but still want to create a new branch for your pull request, you will have to fork the repository first. Read more about creating a pull request from a forked repo here.
+
 
 ### Listed below are the steps to create a Pull Request using a web browser:
 
-**Step One:** Navigate to the repository's home page on GitHub.com.
+**Step One:** Navigate to the repository's home page.
 
 **Step Two:** On the repository's tabs select **Pull Requests**.
 
@@ -151,30 +166,34 @@ If you don't have write access to a repository, but still want to create a new b
 
 **Step Four:** Choose the branch of the upstream repository you want to merge changes into from the **base** branch drop-down option.
 
+![Base and Compare branch dropdown image](images/base_and_compare_branch.png "Base and Compare branch dropdown")
+
 **Step Five:** Choose the branch where your modifications were made from the **compare** branch drop-down option.
 
-
-![Base and Compare branch dropdown image](images/base_and_compare_branch.png "Base and Compare branch dropdown")
 
 **Step Six:** Click on the **Create Pull request** button. This opens up the window as shown below:
 
 ![Create a pull request image](images/create_a_pull_request.png "Create a pull request")
 
-**Step Seven:** Enter the title of your pull request in the **title** field.
+**Step Seven:** Enter the title and description of your pull request in the **title** and  **Leave a comment** field, respectively. You can attach files to the description by dragging and dropping, selecting, or pasting them.
 
-**Step Eight:** Enter a description in the **Leave a comment** field. You can attach files to the description by dragging and dropping, selecting, or pasting them.
 
-**Step Nine:** Below the **Leave a comment** field, click on **Create pull request** button, to create a pull request that is ready for review. To create a draft pull request, Click on the drop-down and then select **Create Draft Pull Request**.
+**Step Eight:** Below the **Leave a comment** field, click on **Create pull request** button, to create a pull request that is ready for review. To create a draft pull request, Click on the drop-down and then select **Create Draft Pull Request**.
 
 
 ## GitHub Desktop vs. GitHub CLI
-GitHub Desktop and GitHub CLI are other ways in which you can interact with GitHub other than through its website.
+GitHub Desktop and GitHub CLI(also known as Command Line Interface) are other ways you can interact with GitHub other than through its website. They are both Open Source projects, which extend the use of GitHub to suit your different preferences. Whether you prefer the straightforwardness of the command line interface or the simplicity of a visual interface.
 
-GitHub CLI(also known as Command Line Interface) makes it possible to take advantage of GitHub's features from your terminal. It is open source and saves the time used in navigating through UI. You can check out their official [website](https://cli.github.com/) to learn how you can install and start using Github CLI.
+The table below highlights a few differences between GitHub Desktop and GitHub CLI:
 
-On the other hand, GitHub Desktop simplifies and enhances your GitHub workflow through an easy-to-use visual interface. With GitHub Desktop, you don't have to be conversant with the terminal, but you can perform Git and GitHub operations by interacting with UI elements. You can check out their official [website](https://desktop.github.com/ ) to learn how you can install and start using GitHub Desktop.
 
-GitHub Desktop and GitHub CLI are both Open Source projects, which extend the use of GitHub to suit your different preferences. Whether you prefer the straightforwardness of the command line interface or the simplicity of a visual interface.
+
+| S/N | GitHub CLI                                                                                                           | GitHub Desktop                                                                                                                |
+|-----|----------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| 1.  | Take advantage of GitHub's features from the terminal.                                                               | Simplifies and enhances GitHub workflow through an easy-to-use visual interface.                                              |
+| 2.  | Perform Git and GitHub operations by typing commands on the command line.                                            | Perform Git and GitHub operations by interacting with UI elements.                                                            |
+| 3.  | Give users access to all Git commands.                                                                               | Give users access to most Git commands.                                                                                       |
+| 4.  | Check out their official [website](https://cli.github.com/) to learn how you can install and start using Github CLI. | Check out their official [website](https://desktop.github.com/ ) to learn how you can install and start using GitHub Desktop. |
 
 
 ## Conclusion
