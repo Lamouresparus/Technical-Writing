@@ -9,7 +9,10 @@ The many use cases of GitHub could leave you wondering, is it a social networkin
 
 
 ## What is Github?
-GitHub is an online code hosting platform and version control system, where developers and programmers can collaborate or work on software projects together. This makes it possible to keep track of the work done and easily navigate between the various versions of the project while managing the online backup.
+GitHub is a web-based code hosting platform where developers and programmers can collaborate and work on software projects together. GitHub stores git repositories online, which makes it possible to:
+* keep track of the work done and 
+* easily navigate through the various versions of the project while managing the online backup.
+
 GitHub is free and quite simple to use and plays a significant role in the Open Source movement.
 
 ## Why Github?
