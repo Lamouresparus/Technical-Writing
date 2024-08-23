@@ -33,6 +33,7 @@ Let's get started!
 
 <img width="497" alt="Screenshot 2024-08-22 at 09 03 09" src="https://github.com/user-attachments/assets/35fc2d27-b68f-4e00-9e88-b51f18a0128c">
 
+
 **Streaming:**  
 &nbsp;&nbsp; Streaming makes it possible to receive real-time chunks of output while the model is still processing your input. This creates a seamless feel.
 
@@ -73,12 +74,12 @@ In your module-level `build.gradle` file, add the following dependencies:
 ## Setup the Layout
 Since you will be generating an image from an inputted text, you will need:
 - an input field, where the user will add their prompts,
-- an image view displays the generated image, and
+- an image view to display the generated image, and
 - a button to trigger image generation from the prompt.
 
 You can also add views for loading and error states.
 
-1. **Create a file named `ImageGeneratorScreen`**.
+1. Create a file named `ImageGeneratorScreen`.
 2. In a `Column`, add a `SubcomposeAsyncImage`, a `TextField`, and a `Button`. I added a `CircularProgressIndicator` to show the loading state.
 Your `ImageGeneratorScreen` should look somewhat like this:
 
@@ -196,7 +197,7 @@ This object will specify:
 
 #### Set Up the ImageGenerator Class
 
-1. Create an `ImageGenerator` Class that implements `Predictable`.Create an ImageGenerator Class that implements Predictable.  The information from this class will be used to build the request body that will be sent to the replicate API.
+1. Create an `ImageGenerator` Class that implements `Predictable`. The information from this class will be used to build the request body that will be sent to the replicate API.
 
 Your class should look like this:
 ``` Kotlin
@@ -212,7 +213,7 @@ data class ImageGenerator(
 The `ImageGenerator` has 3 properties:
 - `versionId`: The version ID of the model,
 - `input`: A map that will contain the prompt and other arguments.
-- `modelId`: The ID of the model. (optional).
+- `modelId`: The ID of the model (optional).
 
 As stated earlier, you will be using the Stable-Diffusion model to generate an image from text. 
 
@@ -238,15 +239,12 @@ You can choose to add more as you please.
 
 Since the `height` and `width` will have a static value, you can create a function, that will modify just the `prompt` in the map. 
 
-3. Create a function inside the `companion object` of the `ImageGenerator` class that takes a prompt as an argument and returns a Map containing the input parameters. The `width` and `height` should have a static values of `768`, and the prompt should be passed as an argument.
+3. Create a function inside the `companion object` of the `ImageGenerator` class that takes a prompt as an argument and returns a Map containing the input parameters. The `width` and `height` should have a static value of `768`, and the prompt should be passed as an argument.
 
    
 Your `ImageGenerator` class should look like this:
 
 ``` Kotlin
-package com.love.replicateapp.ui.theme
-
-import io.github.enyason.predictions.predictable.Predictable
 
 data class ImageGenerator(
     override val versionId: String = "ac732df83cea7fff18b8472768c88ad041fa750ff7682a21affe81863cbe77e4",
